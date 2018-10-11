@@ -1,1 +1,44 @@
-@import "../../sass_mixin/_mixin";
+@import "../../theme/_theme";
+
+.header {
+    height: 120px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+
+    label {
+        position: relative;
+
+        input[type="search"] {
+            width: 20px;
+            padding-right: 70px;
+
+            &:hover {
+                background: transparent;
+            }
+
+            &:focus {
+                width: 450px;
+                background: $brand-color;
+            }
+        }
+
+        i {
+            color: white;
+            font-size: 2.5rem;
+            position: absolute;
+            top: -15px;
+            right: 10px;
+            cursor: pointer;
+        }
+    }
+
+    input[type="button"] {
+
+    }
+}

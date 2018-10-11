@@ -1,0 +1,141 @@
+@import "../../theme/_theme";
+
+.slider {
+    height: 1100px;
+    background: url("../../img/cover.png") 50% 50% no-repeat;
+    display: grid;
+    grid-auto-columns: 1fr;
+    align-items: end;
+    margin-bottom: 70px;
+
+    &__page {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        button {
+            width: 6px;
+            height: 25px;
+            border-radius: 3px;
+            border: none;
+            background: white;
+            opacity: 0.5;
+            margin-bottom: 18px;
+            cursor: pointer;
+        }
+    }
+
+    &__footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        color: white;
+
+        &--info {
+            h1 {
+                @include Helvetica-Bold();
+
+                font-size: 60px;
+                text-transform: uppercase;
+                margin-bottom: 24px;
+            }
+
+            .genre {
+                @include Helvetica-Regular();
+
+                font-size: 1.5rem;
+            }
+
+            span.genre {
+                margin-left: 24px;
+            }
+
+            ul {
+                border-right: 1px solid white;
+                margin-bottom: 40px;
+
+                a {
+                    @include Helvetica-Regular();
+
+                    margin-right: 24px;
+                    color: white;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+            .rating {
+                margin-bottom: 40px;
+                font-size: 0;
+
+                &__stars {
+                    align-items: center;
+                    justify-content: center;
+
+                    i {
+                        display: inline-block;
+                        font-size: 2.121rem;
+                        margin-right: 14px;
+                        color: $brand-color;
+                    }
+                }
+
+                &__count {
+                    padding: 8px 12px;
+                    color: white;
+                    border: 1px solid $brand-color;
+                    border-radius: 6px;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        &--control {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            .movie-button-border {
+                margin-left: 30px;
+            }
+
+            .control-button {
+                align-items: center;
+
+                button {
+                    margin-bottom: 40px;
+                }
+            }
+
+            .favorites {
+                @extend .movie-button;
+                @include Movie-animate-speed(0.2s);
+
+                margin: 0 30px;
+                padding: 0;
+
+                &:hover {
+                    @include Movie-animate-scale();
+                }
+            }
+
+            .control-menu {
+                border: none;
+                background: transparent;
+                cursor: pointer;
+
+                &:hover {
+                    i {
+                        @include Movie-animate-scale(1.3);
+                    }
+                }
+
+                i {
+                    font-size: 1.75rem;
+                    color: white;
+                }
+            }
+        }
+    }
+}

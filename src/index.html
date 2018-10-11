@@ -5,12 +5,393 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MovieRise</title>
     <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+          crossorigin="anonymous">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <main class="main">
-        
-    </main>
+    <div class="film-wrapper">
+        <header class="header wrap padding">
+    <figure>
+        <a href="">
+            <img src="../../img/logo.png" alt="movie rise">
+        </a>
+    </figure>
+    <form method="GET">
+        <label>
+            <input type="search" class="movie-button">
+            <i class="fas fa-search"></i>
+        </label>
+        <input type="button" class="movie-button" value="Sign in">
+        <input type="button" class="movie-button" value="Sign Up">
+    </form>
+</header>
+        <div class="slider padding">
+    <div class="slider__page wrap">
+        <button type="button"></button>
+        <button type="button" class="active"></button>
+        <button type="button"></button>
+        <button type="button"></button>
+        <button type="button"></button>
+    </div>
+    <div class="slider__footer wrap">
+        <div class="slider__footer--info">
+            <h1>The Jungle Book</h1>
+            <div class="flex">
+                <ul class="genre flex flex-wrap">
+                    <li>
+                        <a href="">Adventure</a>
+                    </li>
+                    <li>
+                        <a href="">Drama</a>
+                    </li>
+                    <li>
+                        <a href="">Family</a>
+                    </li>
+                    <li>
+                        <a href="">Fantasy</a>
+                    </li>
+                </ul>
+                <span class="genre">1h 46m</span>
+            </div>
+            <div class="rating flex">
+                <div class="rating__stars flex">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="rating__count">4.8</div>
+            </div>
+        </div>
+        <div class="slider__footer--control">
+            <div class="control-button flex flex-wrap">
+                <button type="button" class="movie-button-border">Watch Now</button>
+                <button type="button" class="movie-button-border">View Info</button>
+                <button type="button" class="favorites">+ Favorites</button>
+                <button type="button" class="control-menu">
+                    <i class="fas fa-ellipsis-v"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+        <nav class="menu padding">
+    <div class="wrap flex space-between">
+        <ul>
+            <li>
+                <a href="">Trending</a>
+            </li>
+            <li>
+                <a href="">Top Rated</a>
+            </li>
+            <li>
+                <a href="">New Arrivals</a>
+            </li>
+            <li>
+                <a href="">Trailers</a>
+            </li>
+            <li>
+                <a href="">Coming</a>
+            </li>
+            <li class="flex">
+                <a href="">
+                    Genre
+                    <i class="fas fa-angle-down"></i>
+                </a>
+                <ul class="submenu">
+                    <li>
+                        <a href="">Item 1</a>
+                    </li>
+                    <li>
+                        <a href="">Item 777</a>
+                    </li>
+                    <li>
+                        <a href="">Item 1</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <button type="button" class="bars">
+            <i class=" fa fa-bars"></i>
+        </button>
+        <div class="menu__view">
+            <button type="button" class="view-active">
+                <i class="fas fa-th-large"></i>
+            </button>
+            <button type="button">
+                <i class="fas fa-th-list"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+        <div class="content wrap">
+    <div class="film hide" style="background-image: url(../../img/1.png)">
+        <div class="description-wrapper">
+            <div class="film__description">
+                <h2 class="clip">Fantastic Beasts</h2>
+                <div class="film__description--rating">4.7</div>
+                <ul class="film__description--range clip">
+                    <li><a href="">Adventure</a></li>
+                    <li><a href="">Family</a></li>
+                    <li><a href="">Fantasy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="film film-active show" style="background-image: url(../../img/1.png)">
+        <div class="transparent"></div>
+        <div class="film-active-wrapper">
+            <div class="control-button flex">
+                <button>
+                    <i class="fas fa-times"></i>
+                </button>
+                <div>
+                    <button type="button" class="favorites">+ Favorites</button>
+                    <button type="button" class="control-menu">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="film__description film-info__description">
+                <h2 class="clip">Fantastic Beasts</h2>
+                <div class="film__description--rating rating-info">4.7</div>
+                <ul class="film__description--range clip">
+                    <li><a href="">Adventure</a></li>
+                    <li><a href="">Family</a></li>
+                    <li><a href="">Fantasy</a></li>
+                </ul>
+            </div>
+            <p class="film-info__text">
+                There are growing dangers in the wizarding world of 1926 New York. Something
+                mysterious is leaving a path of destruction in the streets, threatening to
+                expose the wizarding
+            </p>
+            <button type="button" class="movie-button-border active">Watch Now</button>
+        </div>
+    </div>
+    <div class="film" style="background-image: url(../../img/2.png)">
+        <div class="description-hover">
+            <button type="button" class="film-watch">
+                <i class="fa fa-play"></i>
+            </button>
+            <span>Watch Now</span>
+            <button class="movie-button-border">View info</button>
+        </div>
+        <div class="description-wrapper">
+            <div class="film__description">
+                <h2 class="clip">AssAssin’s Creed</h2>
+                <div class="film__description--rating">4.2</div>
+                <ul class="film__description--range clip">
+                    <li><a href="">Action</a></li>
+                    <li><a href="">Adventure</a></li>
+                    <li><a href="">Fantasy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="film" style="background-image: url(../../img/3.png)">
+        <div class="description-hover">
+            <button type="button" class="film-watch">
+                <i class="fa fa-play"></i>
+            </button>
+            <span>Watch Now</span>
+            <button class="movie-button-border">View info</button>
+        </div>
+        <div class="description-wrapper">
+            <div class="film__description">
+                <h2 class="clip">Now you see me 2</h2>
+                <div class="film__description--rating">4.4</div>
+                <ul class="film__description--range clip">
+                    <li><a href="">Action</a></li>
+                    <li><a href="">Adventure</a></li>
+                    <li><a href="">Comedy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="film" style="background-image: url(../../img/4.png)">
+        <div class="description-hover">
+            <button type="button" class="film-watch">
+                <i class="fa fa-play"></i>
+            </button>
+            <span>Watch Now</span>
+            <button class="movie-button-border">View info</button>
+        </div>
+        <div class="description-wrapper">
+            <div class="film__description">
+                <h2 class="clip">The Legend of Tarzan</h2>
+                <div class="film__description--rating">4.3</div>
+                <ul class="film__description--range clip">
+                    <li><a href="">Action</a></li>
+                    <li><a href="">Adventure</a></li>
+                    <li><a href="">Drama</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="film" style="background-image: url(../../img/5.png)">
+        <div class="description-hover">
+            <button type="button" class="film-watch">
+                <i class="fa fa-play"></i>
+            </button>
+            <span>Watch Now</span>
+            <button class="movie-button-border">View info</button>
+        </div>
+        <div class="description-wrapper">
+            <div class="film__description">
+                <h2 class="clip">Doctor Strange</h2>
+                <div class="film__description--rating">4.8</div>
+                <ul class="film__description--range clip">
+                    <li><a href="">Action</a></li>
+                    <li><a href="">Adventure</a></li>
+                    <li><a href="">Fantasy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="film" style="background-image: url(../../img/6.png)">
+        <div class="description-hover">
+            <button type="button" class="film-watch">
+                <i class="fa fa-play"></i>
+            </button>
+            <span>Watch Now</span>
+            <button class="movie-button-border">View info</button>
+        </div>
+        <div class="description-wrapper">
+            <div class="film__description">
+                <h2 class="clip">Captain America Civil War</h2>
+                <div class="film__description--rating">4.9</div>
+                <ul class="film__description--range clip">
+                    <li><a href="">Action</a></li>
+                    <li><a href="">Adventure</a></li>
+                    <li><a href="">Sci-Fi</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="film" style="background-image: url(../../img/7.png)">
+        <div class="description-hover">
+            <button type="button" class="film-watch">
+                <i class="fa fa-play"></i>
+            </button>
+            <span>Watch Now</span>
+            <button class="movie-button-border">View info</button>
+        </div>
+        <div class="description-wrapper">
+            <div class="film__description">
+                <h2 class="clip">Alice Through the bla-bla</h2>
+                <div class="film__description--rating">4.1</div>
+                <ul class="film__description--range clip">
+                    <li><a href="">Adventure</a></li>
+                    <li><a href="">Family</a></li>
+                    <li><a href="">Fantasy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="film" style="background-image: url(../../img/8.png)">
+        <div class="description-hover">
+            <button type="button" class="film-watch">
+                <i class="fa fa-play"></i>
+            </button>
+            <span>Watch Now</span>
+            <button class="movie-button-border">View info</button>
+        </div>
+        <div class="description-wrapper">
+            <div class="film__description">
+                <h2 class="clip">Finding Dory</h2>
+                <div class="film__description--rating">4.7</div>
+                <ul class="film__description--range clip">
+                    <li><a href="">Animation</a></li>
+                    <li><a href="">Adventure</a></li>
+                    <li><a href="">Comedy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="film" style="background-image: url(../../img/9.png)">
+        <div class="description-hover">
+            <button type="button" class="film-watch">
+                <i class="fa fa-play"></i>
+            </button>
+            <span>Watch Now</span>
+            <button class="movie-button-border">View info</button>
+        </div>
+        <div class="description-wrapper">
+            <div class="film__description">
+                <h2 class="clip">The BFG</h2>
+                <div class="film__description--rating">3.2</div>
+                <ul class="film__description--range clip">
+                    <li><a href="">Adventure</a></li>
+                    <li><a href="">Family</a></li>
+                    <li><a href="">Fantasy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="film" style="background-image: url(../../img/10.png)">
+        <div class="description-hover">
+            <button type="button" class="film-watch">
+                <i class="fa fa-play"></i>
+            </button>
+            <span>Watch Now</span>
+            <button class="movie-button-border">View info</button>
+        </div>
+        <div class="description-wrapper">
+            <div class="film__description">
+                <h2 class="clip">Independence Day</h2>
+                <div class="film__description--rating">3.9</div>
+                <ul class="film__description--range clip">
+                    <li><a href="">Action</a></li>
+                    <li><a href="">Sci-Fi</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="film" style="background-image: url(../../img/11.png)">
+        <div class="description-hover">
+            <button type="button" class="film-watch">
+                <i class="fa fa-play"></i>
+            </button>
+            <span>Watch Now</span>
+            <button class="movie-button-border">View info</button>
+        </div>
+        <div class="description-wrapper">
+            <div class="film__description">
+                <h2 class="clip">Ice Age: Collisiobla-bla</h2>
+                <div class="film__description--rating">4.5</div>
+                <ul class="film__description--range clip">
+                    <li><a href="">Adventure</a></li>
+                    <li><a href="">Comedy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="film" style="background-image: url(../../img/12.png)">
+        <div class="description-hover">
+            <button type="button" class="film-watch">
+                <i class="fa fa-play"></i>
+            </button>
+            <span>Watch Now</span>
+            <button class="movie-button-border">View info</button>
+        </div>
+        <div class="description-wrapper">
+            <div class="film__description">
+                <h2 class="clip">Moana</h2>
+                <div class="film__description--rating">4.9</div>
+                <ul class="film__description--range clip">
+                    <li><a href="">Action</a></li>
+                    <li><a href="">Fantasy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
 </body>
 </html>

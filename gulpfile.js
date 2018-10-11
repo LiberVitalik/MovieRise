@@ -52,7 +52,7 @@ gulp.task('clean', function() {
     return del.sync('dist');
 });
 
-gulp.task('build', ['clean', 'sass', 'fileInclude', 'replaceStyle', 'replaceHtml'], function() {
+gulp.task('build', ['clean', 'fileInclude', 'sass', 'replaceStyle', 'replaceHtml'], function() {
     gulp.src(['src/css/*.css', '!src/css/style.css']).pipe(gulp.dest('dist/css'));
     gulp.src('src/fonts/**/*').pipe(gulp.dest('dist/fonts'));
     gulp.src('src/img/**/*').pipe(gulp.dest('dist/img'));
@@ -62,7 +62,7 @@ gulp.task('build', ['clean', 'sass', 'fileInclude', 'replaceStyle', 'replaceHtml
 gulp.task('watch', ['fileInclude', 'browser-sync', 'sass'], function () {
     gulp.watch('src/template/**/*.+(scss|sass)', ['sass']);
     gulp.watch('src/template/*.+(scss|sass)', ['sass']);
-    gulp.watch('src/sass_mixin/*.+(scss|sass)', ['sass']);
+    gulp.watch('src/theme/*.+(scss|sass)', ['sass']);
     gulp.watch('src/template/**/*.html', ['fileInclude'], browserSync.reload);
     gulp.watch('src/*.html', browserSync.reload);
 });
