@@ -13,6 +13,9 @@ body {
     max-width: 2400px;
     margin: 0 auto;
     position: relative;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 .wrap {
@@ -43,6 +46,16 @@ body {
 .flex-wrap {
     display: flex;
     flex-wrap: wrap;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
 }
 
 .transparent {
