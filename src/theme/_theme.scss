@@ -82,3 +82,10 @@ $brand-color: #0aaee4;
 .active {
     background: $brand-color !important;
 }
+@media all and (max-width: 1500px) {
+    .movie-button,
+    .movie-button-border {
+        padding: 10px 20px;
+        font-size: 1.5rem;
+    }
+}

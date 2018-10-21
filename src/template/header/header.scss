@@ -25,7 +25,7 @@
             }
 
             &:focus {
-                width: 450px;
+                width: 280px;
                 background: $brand-color;
             }
         }
@@ -34,13 +34,27 @@
             color: white;
             font-size: 2.5rem;
             position: absolute;
-            top: -15px;
+            top: 50%;
+            transform: translateY(-50%);
             right: 10px;
             cursor: pointer;
         }
     }
+}
 
-    input[type="button"] {
+@media all and (max-width: 1000px) {
+    .header {
+        display: grid;
+        grid-template-columns: 1fr;
 
+        a {
+            text-align: center;
+        }
+
+        label {
+            i {
+                font-size: 2rem;
+            }
+        }
     }
 }

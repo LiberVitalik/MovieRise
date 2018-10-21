@@ -1,14 +1,15 @@
 @import "../../theme/_theme";
 
 .footer-wrapper {
-    width: 100%;
     background: white;
 
     .footer {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(100px, 700px));
-        justify-content: space-between;
-        padding: 70px 0;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+        padding: 70px 0 0;
+        margin-bottom: 2%;
 
         &__menu {
             li:not(:last-of-type) {
@@ -17,7 +18,9 @@
 
             a {
                 @include Helvetica-Regular();
+                @extend .clip;
 
+                max-width: 220px;
                 font-size: 1.5rem;
                 color: #a7aaab;
                 text-align: center;
@@ -32,22 +35,6 @@
             @include Logo($color: $brand-color);
 
             justify-content: center;
-
-            a {
-                margin-bottom: 8%;
-            }
-
-            &--description {
-                @include Logo($color: #a7aaab, $size: 1.5rem);
-                @include Helvetica-Regular();
-
-                font-size: 1.5rem;
-                color: #a7aaab;
-
-                a {
-                    margin: 0 5px;
-                }
-            }
         }
 
         &__social {
@@ -73,6 +60,38 @@
             a:not(:last-of-type) {
                 margin-right: 20px;
             }
+        }
+    }
+
+    .footer-copyright {
+        @include Logo($color: #a7aaab, $size: 1.5rem);
+        @include Helvetica-Regular();
+
+        padding: 0 0 70px;
+        font-size: 1.5rem;
+        color: #a7aaab;
+
+        a {
+            margin: 0 5px;
+        }
+    }
+}
+
+@media all and (max-width: 1600px) {
+    .footer-wrapper {
+        .footer {
+            grid-template-columns: 1fr;
+            grid-gap: 10px;
+            padding: 30px 0 0;
+            margin-bottom: 2%;
+
+            .flex {
+                justify-content: center;
+            }
+        }
+
+        .footer-copyright {
+            padding: 0 0 30px;
         }
     }
 }
