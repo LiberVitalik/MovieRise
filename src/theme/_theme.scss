@@ -1,0 +1,91 @@
+@import "_fonts";
+
+$brand-color: #0aaee4;
+
+.movie-button,
+.movie-button-border{
+    @include Helvetica-Regular();
+
+    color: white;
+    background: transparent;
+    padding: 20px 40px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1.75rem;
+    cursor: pointer;
+
+    &:hover {
+        background: $brand-color;
+    }
+}
+
+.movie-button-border {
+    border: 2px solid white;
+
+    &:hover {
+        border-color: transparent;
+    }
+}
+
+@mixin Movie-animate-speed($speed: 0.3s) {
+    transition: transform $speed linear;
+}
+
+@mixin Movie-animate-scale($scale: 1.1) {
+    transform: scale($scale);
+}
+
+@mixin align($vertical: center,
+             $horizontal: center) {
+    display: flex;
+    align-items: $vertical;
+    justify-content: $horizontal;
+}
+
+@mixin Transparent($opacity: 0.4) {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, $opacity);
+}
+
+@mixin Logo($color: white, $size: 3.125rem) {
+    a.logo {
+        @include Helvetica-Black();
+
+        font-size: $size;
+        text-transform: uppercase;
+        color: $color;
+
+        &:active,
+        &:focus {
+            color: $color;
+        }
+
+        span {
+            @include Helvetica-Thin();
+        }
+    }
+}
+
+@mixin Multi-clip($line-count: 0, $max-height: auto) {
+    max-height: $max-height;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line-count;
+}
+
+.active {
+    background: $brand-color !important;
+}
+@media all and (max-width: 1500px) {
+    .movie-button,
+    .movie-button-border {
+        padding: 10px 20px;
+        font-size: 1.5rem;
+    }
+}
